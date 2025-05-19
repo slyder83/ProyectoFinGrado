@@ -1,12 +1,161 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Fuentas de la web */
+@layer fonts {
+    /* caveat-regular - latin */
+    @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Caveat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/caveat-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+    /* caveat-500 - latin */
+    @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Caveat';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/assets/fonts/caveat-v18-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+    /* caveat-600 - latin */
+    @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Caveat';
+    font-style: normal;
+    font-weight: 600;
+    src: url('/assets/fonts/caveat-v18-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+    /* caveat-700 - latin */
+    @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Caveat';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/assets/fonts/caveat-v18-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
 }
 
-body {
-    background-color: beige;
+/* Colores */
+@layer colors {
+    :root {
+        --color-blanco: #fff;
+        --color-crema: #fff0de;
+        --color-rojo: #b0454a;
+        --color-rojo-activo: #e74c3c;
+        --color-negro: #121212;
+
+        --color-texto-negro: var(--color-negro);
+        --color-texto-blanco: var(--color-blanco);
+
+    }
 }
+
+/* Tipografias */
+@layer typography {
+    :root {
+        --font-size-80: calc(80 /16 * 1rem);
+        --font-size-48: calc(48 /16 * 1rem);
+        --font-size-24: calc(24 /16 * 1rem);
+
+        --font-size-h2: var(--font-size-48);
+        --font-size-p:var(--font-size-24);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Caveat', Arial, Helvetica, sans-serif;
+    }
+}
+
+/* Estilos globales */
+@layer global {
+    *, *::before, *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: var(--color-crema);
+        font-family: 'Caveat', Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+        color: var(--color-texto-negro);
+    }
+}
+
+/* Botones */
+@layer button {
+    .boton-reserva {
+        display: inline-block;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 1rem 2rem;
+        background: var(--color-rojo);
+        color: var(--color-texto-blanco);
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 2rem;
+        transition: background 0.3s ease;
+
+    }
+    
+    .boton-reserva:hover {
+        background: var(--color-rojo-activo);
+    }
+}
+
+/* Sección Hero */
+@layer hero {
+    .hero {
+        text-align: center;
+        padding: 4rem 2rem;
+    }
+
+    .hero__contenido {
+        .titulo {
+            font-size: var(--font-size-h2);
+            margin-bottom: 1rem;
+        }
+
+        .descripcion {
+            font-size: var(--font-size-24);
+        }
+    }
+}
+
+/* Sección platos */
+@layer platos {
+    .platos {
+        padding: 4rem 2rem;
+        background: var(--color-rojo);
+        color: var(--color-texto-blanco);
+    }
+
+    .platos__contenido {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2rem;
+        margin-top: 2rem;
+
+    }
+
+    .plato__tarjeta {
+        flex : 1 1 calc(33.333% - 2rem);
+        background: var(--color-crema);
+        color: var(--color-negro);
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease;
+
+    }
+
+    .plato__tarjeta:hover {
+        transform: scale(1.02) translateY(-5px);
+    }
+}
+
+
+
 
 header {
     position: relative;

@@ -398,3 +398,7 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+src/lock.png
+src/img/restaurant-bg.jpg
+src/.DS_Store
+.DS_Store
