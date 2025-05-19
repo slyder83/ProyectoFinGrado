@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: beige;
+}
+
+header {
+    position: relative;
+    height: 60vh;
+    background: url('../src/img/restaurant-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+  
+header h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+  
+nav {
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+  
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav.sticky {
+    transform: translateY(20px);
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+#nav-placeholder {
+    height: 0;
+    transition: height 0.3s ease;
+}
+
+nav.sticky + #nav-placeholder {
+    height: 20px;
+}
+
+nav.sticky ul li a {
+    color: green;
+}
