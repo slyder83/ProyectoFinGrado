@@ -8,8 +8,10 @@
 </head>
 <body>
     <header>
-        <h1>Restaurante Asia Oriental</h1>
-        <p>La auténtica experiencia asiática</p>
+        <img src="/assets/imagenes/minha-baek-Z073P3hgGdM-unsplash.jpg" alt="Foto de Minha Baek en Unsplash" width="2400" height="1501">
+        <div class="header__opacidad"></div>
+        <h1 class="header__titulo">Restaurante Asia Oriental</h1>
+        <p class="header__subtitulo">La auténtica experiencia asiática</p>
     </header>
     
     <nav id="navbar">
@@ -26,40 +28,133 @@
     <div id="nav-placeholder"></div>
 
     <main>
-        <section class="hero">
+        <section class="hero bg-crema">
             <div class="hero__contenido">
-                <h2 class="titulo">Bienvenido a la experiencia culinaria asiática</h2>
-                <p class="descripcion">Descubre el auténtico sabor asiático de la cocina oriental</p>
+                <h2 class="hero__titulo">Bienvenido a la experiencia culinaria asiática</h2>
+                <p class="hero__descripcion">Descubre el auténtico sabor asiático de la cocina oriental</p>
                 <a href="formulario_reserva.php" class="boton-reserva">Reservar una mesa</a>
             </div>
         </section>
 
-        <section class="platos">
-            <h2 class="titulo">Nuestros platos destacados</h2>
+        <section class="platos bg-rojo">
             <div class="platos__contenido">
-                <div class="plato__tarjeta">
-                    <h3 class="titulo">Sushi especial</h3>
-                    <p class="descripcion">Selección premium de sushis</p>
+                <h2 class="platos__titulo">Nuestros platos destacados</h2>
+                <div class="plato__contenido">
+    
+                    <div class="plato__tarjeta">
+                        <div class="plato__imagen">
+                            <img src="/assets/imagenes/anna-keibalo-mqsv7vM6-XU-unsplash.jpg" alt="plato" width="2400" height="2446">
+                        </div>
+                        <h3 class="plato__titulo">Sushi especial</h3>
+                        <p class="plato__descripcion">Selección premium de sushis</p>
+                    </div>
+    
+                    <div class="plato__tarjeta">
+                        <div class="plato__imagen">
+                            <img src="/assets/imagenes/juan-francisco-pineda-lopez-W8dBpGlIYRA-unsplash.jpg" alt="plato" width="2400" height="2400">
+                        </div>
+                        <h3 class="plato__titulo">Ramen tradicional</h3>
+                        <p class="plato__descripcion">Fideos de caldo casero</p>
+                    </div>
+    
+                    <div class="plato__tarjeta">
+                        <div class="plato__imagen">
+                            <img src="/assets/imagenes/mikey-frost-klTf2RN37Ts-unsplash.jpg" alt="plato" width="2400" height="1600">
+                        </div>
+                        <h3 class="plato__titulo">Gyozas variado</h3>
+                        <p class="plato__descripcion">seleccion de gyozas variadas</p>
+                    </div>
+    
                 </div>
-                <div class="plato__tarjeta">
-                    <h3 class="titulo">Ramen tradicional</h3>
-                    <p class="descripcion">Fideos de caldo casero</p>
+            </div>
+        </section>
+
+        <section class="sobre-nosotros bg-crema">
+            <div class="sobre-nosotros__contenido">
+                <div class="sobre-nosotros__historia">
+                    <div class="sobre-nosotros__textos">
+                        <h2 class="sobre-nosotros__titulo">Nuestra historia</h2>
+                        <p class="sobre-nosotros__descripcion">Fundado en 2010, Restaurante asia oriental es un referente de la comida asitatica, nuestro restaurante combina las tradiciones gastronomicas de China, Japón y otros paises asiaticos.</p>
+                        <p class="sobre-nosotros__descripcion">Cada plato es el resultado de generaciones de cocineros, utilizando las recetas tradicionales adaptadas a la era moderna.</p>
+                    </div>
+
+                    <div class="sobre-nosotros__imagen sombra">
+                        <img src="/assets/imagenes/kc-shum-pDj8DiyhwMg-unsplash.jpg" alt="Sobre nosotros" width="2400" height="1800">
+                    </div>
                 </div>
-                <div class="plato__tarjeta">
-                    <h3 class="titulo">Dim sum variado</h3>
-                    <p class="descripcion">seleccion de dim sum variado</p>
+
+                <div class="valores">
+                    <h2>Nuestros valores</h2>
+                    <div class="valores__contenido">
+                        <div class="valores__tarjeta">
+                            <i></i>
+                            <h3>Pasion</h3>
+                            <p>Amor por la cocina asiatica y dedicacion culinaria.</p>
+                        </div>
+
+                        <div class="valores__tarjeta">
+                            <i></i>
+                            <h3>Calidad</h3>
+                            <p>Ingredientes frescos y recetas tradicionales para crear los mejores sabores.</p>
+                        </div>
+
+                        <div class="valores__tarjeta">
+                            <i></i>
+                            <h3>Servicio</h3>
+                            <p>Atencion personalizada y un buen ambiente para los clientes.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-
-
     
     <footer>
-        <p>&copy; <span id="year"></span> Restaurante Asia Oriental. Todos los derechos reservados</p>
+        <div class="footer__contenido">
+            <div class="footer__informacion">
+                <div class="footer__tarjeta">
+                    <h3>Horario</h3>
+                    <p>Martes a Viernes: 12:00 - 23:00</p>
+                    <p>Sabados y Domingos: 13:00 - 23:00</p>
+                    <p>Lunes: Cerrado</p>
+                </div>
+
+                <div class="footer__tarjeta">
+                    <h3>Dirección</h3>
+                    <p>Calle de la Gastronomía, 123</p>
+                    <p>Madrid, España</p>
+                    <a href="https://www.google.com/maps?q=Calle+de+la+Gastronomía,+123,+Madrid,+España" target="_blank" rel="noopener noreferrer">Ver en Google Maps</a>
+                </div>
+
+                <div class="footer__tarjeta">
+                    <h3>Contacto</h3>
+                    <p>+34 123 456 789</p>
+                    <p><a href="mailto:info@restauranteasia.com">info@restauranteasia.com</a></p>
+                </div>
+
+                <div class="footer__tarjeta">
+                    <h3>Redes Sociales</h3>
+                    <a href="#" title="Facebook">Facebook</a>
+                    <a href="#" title="Instagram">Instagram</a>
+                    <a href="#" title="Twitter">Twitter</a>
+                </div>
+            </div>
+
+            <div class="footer__separador"></div>
+
+            <div class="footer__legal">
+                <p>&copy; <span id="year"></span> Restaurante Asia Oriental. Todos los derechos reservados</p>
+                <div class="footer__politicas">
+                    <p><a href="politica_privacidad.html">Política de privacidad</a></p>
+                    <p><a href="terminos_condiciones.html">Términos y condiciones</a></p>
+                    <p><a href="cookies.html">Política de cookies</a></p>
+                    <p><a href="aviso_legal.html">Aviso legal</a></p>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
     <script src="js/footer.js"></script>
 
 </body>
