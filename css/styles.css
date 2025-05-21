@@ -132,6 +132,14 @@
         max-width: 1200px;
         margin: 0 auto;
     }
+
+    button {
+        font-family: 'Caveat', Arial, Helvetica, sans-serif;
+    }
+
+    label {
+        font-size: var(--font-size-p);
+    }
 }
 
 /* Botones */
@@ -144,10 +152,12 @@
         font-weight: 600;
         text-transform: uppercase;
         text-decoration: none;
+        border: none;
         border-radius: 15px;
         margin-top: 2rem;
         transition: background 0.3s ease;
         cursor: pointer;
+        font-size: var(--font-size-p);
     }
     
     .boton-reserva:hover {
@@ -387,6 +397,57 @@
         .sobre-nosotros__textos, .sobre-nosotros__imagen {
             max-width: 100%;
         }
+    }
+}
+
+/* Formulario de reservas */
+@layer formulario {
+    .pagina-reserva {
+        background: var(--color-rojo);
+        padding: 2rem;
+    }
+
+    .formulario__contenido {
+        background: var(--color-crema);
+        padding: 2rem;
+        border-radius: 15px;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .formulario__reservas {
+        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formulario__grupo {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .formulario__cita {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .formulario__cita, .formulario__grupo {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    .formulario__grupo input, .formulario__grupo select {
+        padding: 1rem;
+        border-radius: 7px;
+        border: 1px solid var(--color-negro-200);
+    }
+
+    .formulario__grupo input:focus, .formulario__grupo select:focus {
+        border-color: var(--color-rojo-activo);
+        outline: none;
     }
 }
 
