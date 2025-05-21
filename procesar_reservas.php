@@ -2,7 +2,7 @@
 // Para conectarse a la base de datos
 require_once "conexion.php";
 
-// Comprobar los datos de formulario
+// Comprobar los datos del formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre_cliente = $_POST['nombre_cliente'];
     $telefono = $_POST['telefono'];
