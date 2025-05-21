@@ -8,7 +8,7 @@
     font-family: 'Caveat';
     font-style: normal;
     font-weight: 400;
-    src: url('/assets/fonts/caveat-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('../assets/fonts/caveat-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
     }
     /* caveat-500 - latin */
     @font-face {
@@ -16,7 +16,7 @@
     font-family: 'Caveat';
     font-style: normal;
     font-weight: 500;
-    src: url('/assets/fonts/caveat-v18-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('../assets/fonts/caveat-v18-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
     }
     /* caveat-600 - latin */
     @font-face {
@@ -24,7 +24,7 @@
     font-family: 'Caveat';
     font-style: normal;
     font-weight: 600;
-    src: url('/assets/fonts/caveat-v18-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('../assets/fonts/caveat-v18-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
     }
     /* caveat-700 - latin */
     @font-face {
@@ -32,7 +32,7 @@
     font-family: 'Caveat';
     font-style: normal;
     font-weight: 700;
-    src: url('/assets/fonts/caveat-v18-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('../assets/fonts/caveat-v18-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
     }
 }
 
@@ -55,14 +55,18 @@
 /* Tipografias */
 @layer typography {
     :root {
-        --font-size-80: calc(80 /16 * 1rem);
-        --font-size-48: calc(48 /16 * 1rem);
+        --font-size-80: calc(96 /16 * 1rem);
+        --font-size-64: calc(64 /16 * 1rem);
+        --font-size-48: calc(40 /16 * 1rem);
+        --font-size-32: calc(32 /16 * 1rem);
         --font-size-24: calc(24 /16 * 1rem);
 
         --font-size-h1: var(--font-size-80);
-        --font-size-h2: var(--font-size-48);
-        --font-size-h3: var(--font-size-24);
-        --font-size-p:var(--font-size-24);
+        --font-size-h2: var(--font-size-64);
+        --font-size-h3: var(--font-size-48);
+        --font-size-h4: var(--font-size-32);
+        --font-size-p:var(--font-size-32);
+        --font-size-p-small:var(--font-size-24);
     }
 
     h1 {
@@ -77,8 +81,16 @@
         font-size: var(--font-size-h3);
     }
 
+    h4 {
+        font-size: var(--font-size-h4);
+    }
+
     p {
         font-size: var(--font-size-p);
+    }
+
+    p.small {
+        font-size: var(--font-size-p-small);
     }
 }
 
@@ -96,7 +108,7 @@
     }
 
     .sombra {
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     }
 
     .bg-crema {
@@ -107,13 +119,18 @@
         background: var(--color-rojo);
     }
 
+    a {
+        text-decoration: none;
+        color: var(--color-negro-200);
+    }
+
     a:hover {
         color: var(--color-rojo-activo);
     }
 
-    a {
-        text-decoration: none;
-        color: var(--color-negro-200);
+    .ancho-max {
+        max-width: 1200px;
+        margin: 0 auto;
     }
 }
 
@@ -127,7 +144,7 @@
         font-weight: 600;
         text-transform: uppercase;
         text-decoration: none;
-        border-radius: 5px;
+        border-radius: 15px;
         margin-top: 2rem;
         transition: background 0.3s ease;
         cursor: pointer;
@@ -176,15 +193,6 @@
         color: var(--color-texto-blanco);
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
     }
-
-    .header__titulo {
-        font-size: var(--font-size-h1);
-    }
-
-    .header__subtitulo {
-        font-size: var(--font-size-p);
-    }
-     
 }
 
 /* menu nav */
@@ -244,12 +252,7 @@
     }
 
     .hero__titulo {
-        font-size: var(--font-size-h2);
         margin-bottom: 1rem;
-    }
-
-    .hero__descripcion {
-        font-size: var(--font-size-24);
     }
 }
 
@@ -260,18 +263,12 @@
         color: var(--color-texto-blanco);
     }
 
-    .platos__contenido {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
     .plato__contenido {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 2rem;
         margin-top: 2rem;
-
     }
 
     .plato__tarjeta {
@@ -281,8 +278,7 @@
         border-radius: 15px;
         overflow: hidden;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-        transition: transform 0.3s ease;
-
+        transition: transform 0.27s ease;
     }
 
     .plato__tarjeta:hover {
@@ -309,17 +305,23 @@
         padding: 0 1rem 1rem;
         color: var(--color-negro-200);
     }
+
+    /* Diseño responsive para pantallas inferiores a 700px */
+    @media (width < calc(700 / 16 * 1rem)) {
+        .plato__contenido {
+            flex-direction: column;
+        }
+
+        .plato__tarjeta {
+            flex: 1 1 100%;
+        }
+    }
 }
 
 /* Seccion sobre nosotros */
 @layer sobre-nosotros {
     .sobre-nosotros {
         padding: 4rem 2rem;
-    }
-    
-    .sobre-nosotros__contenido {
-        max-width: 1200px;
-        margin: 0 auto;
     }
 
     .sobre-nosotros__historia {
@@ -332,7 +334,11 @@
 
     .sobre-nosotros__textos, .sobre-nosotros__imagen {
         flex: 1 1 50%;
-        max-width: 45%;
+        max-width: 47%;
+    }
+
+    .sobre-nosotros__imagen {
+        border-radius: 15px;
     }
 
     .sobre-nosotros__imagen img {
@@ -341,7 +347,7 @@
         height: auto;
         object-fit: cover;
         display: block;
-        border-radius: 10px;
+        border-radius: 15px;
     }
     
     .valores {
@@ -361,7 +367,26 @@
         flex: 1 1 250px;
         padding: 2rem;
         background: var(--color-blanco);
-        border-radius: 10px
+        border-radius: 15px
+    }
+
+    .icono {
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-bottom: 1rem;
+        color: var(--color-rojo);
+    }
+
+    /* Diseño responsive para pantallas inferiores a 700px */
+    @media (width < calc(700 / 16 * 1rem)) {
+        .sobre-nosotros__historia {
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sobre-nosotros__textos, .sobre-nosotros__imagen {
+            max-width: 100%;
+        }
     }
 }
 
@@ -381,11 +406,9 @@
     .footer__informacion {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-evenly;
         gap: 1rem;
         padding: 0 2rem;
-        margin: 0 auto;
-        max-width: 1200px;
     }
 
     .footer__tarjeta {
@@ -394,7 +417,7 @@
         margin-bottom: 1rem;
     }
 
-    .footer__tarjeta h3 {
+    .footer__tarjeta h4 {
         margin-bottom: 1rem;
     }
 
@@ -412,5 +435,27 @@
     .footer__politicas {
         display: flex;
         gap: 1rem;
+    }
+
+    .footer__redes-sociales {
+        gap: 1.5rem;
+        display: flex;
+    }
+
+    .red-social {
+        width: 2rem;
+        height: 2rem;
+        color: var(--color-negro-200);
+        transition: color 0.27s ease-in-out;
+    }
+
+    .red-social:hover {
+        color: var(--color-rojo-activo);
+    }
+
+    @media (width <= calc(640 / 16 * 1rem)) {
+        .footer__tarjeta {
+            justify-items: center;
+        }
     }
 }
