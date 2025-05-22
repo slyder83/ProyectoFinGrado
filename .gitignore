@@ -402,3 +402,5 @@ src/lock.png
 src/img/restaurant-bg.jpg
 src/.DS_Store
 .DS_Store
+.vscode/settings.json
+notas.txt

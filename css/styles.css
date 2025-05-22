@@ -140,13 +140,22 @@
     label {
         font-size: var(--font-size-p);
     }
+
+    .icono {
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-bottom: 1rem;
+        color: var(--color-rojo);
+        justify-items: center;
+    }
 }
 
 /* Botones */
 @layer button {
-    .boton-reserva {
-        display: inline-block;
-        padding: 1rem 2rem;
+    .boton-formulario {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         background: var(--color-rojo);
         color: var(--color-texto-blanco);
         font-weight: 600;
@@ -154,14 +163,25 @@
         text-decoration: none;
         border: none;
         border-radius: 15px;
-        margin-top: 2rem;
         transition: background 0.3s ease;
         cursor: pointer;
         font-size: var(--font-size-p);
+        padding: 1rem 2rem;
+        margin: 1rem;
+        gap: 1rem;
     }
     
-    .boton-reserva:hover {
+    .boton-formulario:hover {
         background: var(--color-rojo-activo);
+    }
+
+    .boton-formulario .icono {
+        width: 2rem;
+        height: 2rem;
+        display: inline-block;
+        margin-bottom: 0;
+        color: var(--color-texto-blanco);
+
     }
 }
 
@@ -380,13 +400,6 @@
         border-radius: 15px
     }
 
-    .icono {
-        width: 3.5rem;
-        height: 3.5rem;
-        margin-bottom: 1rem;
-        color: var(--color-rojo);
-    }
-
     /* Diseño responsive para pantallas inferiores a 700px */
     @media (width < calc(700 / 16 * 1rem)) {
         .sobre-nosotros__historia {
@@ -400,9 +413,9 @@
     }
 }
 
-/* Formulario de reservas */
+/* Formularios */
 @layer formulario {
-    .pagina-reserva {
+    .pagina-formulario {
         background: var(--color-rojo);
         padding: 2rem;
     }
@@ -415,7 +428,7 @@
         margin: 0 auto;
     }
 
-    .formulario__reservas {
+    .formulario__grupos {
         gap: 2rem;
         display: flex;
         flex-direction: column;
@@ -448,6 +461,29 @@
     .formulario__grupo input:focus, .formulario__grupo select:focus {
         border-color: var(--color-rojo-activo);
         outline: none;
+    }
+
+    .label__icono {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .label__icono .icono {
+        margin-bottom: 0;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .formulario__cabecera {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .formulario__cabecera .icono {
+        width: 6rem;
+        height: 6rem;
+        margin-bottom: 0;
     }
 }
 
