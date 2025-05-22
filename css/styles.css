@@ -151,7 +151,7 @@
 }
 
 /* Botones */
-@layer button {
+@layer botones {
     .boton-formulario {
         display: inline-flex;
         align-items: center;
@@ -181,7 +181,6 @@
         display: inline-block;
         margin-bottom: 0;
         color: var(--color-texto-blanco);
-
     }
 }
 
@@ -484,6 +483,26 @@
         width: 6rem;
         height: 6rem;
         margin-bottom: 0;
+    }
+}
+
+/* Panel de gestión */
+@layer panel-gestion {
+    .panel__principal {
+        background: var(--color-rojo);
+        padding: 2rem;
+    }
+
+    .panel__contenido {
+        background: var(--color-crema);
+        padding: 2rem;
+        border-radius: 15px;
+        margin: 0 auto;
+    }
+
+    .tabla__principal {
+        background: var(--color-blanco);
+        border-radius: 15px;
     }
 }
 
