@@ -25,10 +25,10 @@
     <div id="nav-placeholder"></div>
 
     <main>
-        <div class="pagina-reserva">
+        <div class="pagina-formulario">
             <div class="formulario__contenido ancho-max sombra">
                 <!-- Formulario para hacer las reservas con sus datos indicados -->
-                <form action="procesar_reservas.php" method="POST" class="formulario__reservas">
+                <form action="procesar_reservas.php" method="POST" class="formulario__grupos">
                     <div class="formulario__grupo">
                         <label for="nombre_cliente">Nombre:</label>
                         <input type="text" name="nombre_cliente" id="nombre_cliente" required>
@@ -88,7 +88,7 @@
                         </select>
                     </div>        
         
-                     <button type="submit" class="boton-reserva">Reservar una mesa</button>
+                    <button type="submit" class="boton-formulario">Reservar una mesa</button>
                 </form>
             </div>
         </div>
