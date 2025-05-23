@@ -39,16 +39,37 @@
 /* Colores */
 @layer colors {
     :root {
+        /* codigo de colores */
         --color-blanco: #fff;
         --color-crema: #fff0de;
-        --color-rojo: #b0454a;
-        --color-rojo-activo: #e74c3c;
         --color-negro: #121212;
         --color-negro-200: #666666;
+        --color-negro-400: #66666626;
+        --color-rojo-activo: #e74c3c;
+        --color-rojo-claro: #fee2e2;
+        --color-rojo: #b0454a;
+        --color-verde-claro: #dcfce7;
+        --color-verde: #166534;
+        --color-azul-claro: #dbeafe;
+        --color-azul: #1e40af;
+        --color-amarillo-claro: #fef3c7;
+        --color-naranja: #92400e;
+
 
         --color-texto-negro: var(--color-negro);
         --color-texto-negro-claro: var(--color-negro-200);
         --color-texto-blanco: var(--color-blanco);
+        --color-negro-claro-bg:var(--color-negro-400);
+
+        /* colores de los estados de las reservas */
+        --color-pendiente-texto:var(--color-naranja);
+        --color-pendiente-bg: var(--color-amarillo-claro);
+        --color-en_proceso-texto: var(--color-azul);
+        --color-en_proceso-bg: var(--color-azul-claro);
+        --color-completada-texto:var(--color-verde);
+        --color-completada-bg:var(--color-verde-claro);
+        --color-cancelada-texto:var(--color-rojo);
+        --color-cancelada-bg:var(--color-rojo-claro);
     }
 }
 
@@ -176,6 +197,37 @@
     }
 
     .boton-formulario .icono {
+        width: 2rem;
+        height: 2rem;
+        display: inline-block;
+        margin-bottom: 0;
+        color: var(--color-texto-blanco);
+    }
+
+    .boton-cerrar-sesion {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--color-rojo);
+        color: var(--color-texto-blanco);
+        font-weight: 600;
+        text-transform: uppercase;
+        text-decoration: none;
+        border: none;
+        border-radius: 15px;
+        transition: background 0.3s ease;
+        cursor: pointer;
+        font-size: var(--font-size-p);
+        padding: 1rem 2rem;
+        margin: 1rem;
+        gap: 1rem;
+    }
+
+    .boton-cerrar-sesion:hover {
+        background: var(--color-rojo-activo);
+    }
+
+    .boton-cerrar-sesion .icono {
         width: 2rem;
         height: 2rem;
         display: inline-block;
@@ -499,10 +551,111 @@
         border-radius: 15px;
         margin: 0 auto;
     }
+    
+    .cabecera__contenido {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .usuario__informacion {
+        display: inline-flex;
+        flex-direction: row;
+    }
 
     .tabla__principal {
         background: var(--color-blanco);
         border-radius: 15px;
+        margin-top: 1rem;
+    }
+
+    .tabla__contenido {
+        border-radius: 15px;
+        padding: 1rem;
+    }
+
+    .tabla__responsive {
+        overflow-x: auto;
+    }
+
+    .tabla__gestion {
+        width: 100%;
+        margin-bottom: 1rem;
+        border-collapse: collapse;
+    }
+
+    .tabla__gestion th, .tabla__gestion td {
+        padding: 0.75rem 1rem;
+        text-align: left;
+        border-bottom: 1px solid var(--color-negro-200);
+    }
+
+    .tabla__gestion th {
+        background-color: var(--color-negro-400);
+        font-weight: 600;
+    }
+
+    .tabla__gestion tbody tr:hover {
+        background-color: var(--color-negro-400);
+    }
+
+    .estado__formulario {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .estado__fondo {
+        display: inline-block;
+        padding: 0.5rem 0.9rem;
+        border-radius: 20px;
+        font-weight: 500;
+    }
+
+    .estado__fondo.pendiente {
+        color: var(--color-pendiente-texto);
+        background-color: var(--color-pendiente-bg);
+    }
+
+    .estado__fondo.en_proceso {
+        color: var(--color-en_proceso-texto);
+        background-color: var(--color-en_proceso-bg);
+    }
+
+    .estado__fondo.completada {
+        color: var(--color-completada-texto);
+        background-color: var(--color-completada-bg);
+    }
+
+    .estado__fondo.cancelada {
+        color: var(--color-cancelada-texto);
+        background-color: var(--color-cancelada-bg);
+    }
+
+    .estado__seleccion {
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        border: 1px solid var(--color-negro-200);
+    }
+
+    .sin-registros {
+        text-align: center;
+        padding: 2rem;
+        color: var(--color-texto-negro-claro);
+    }
+
+    .tabla__gestion .icono {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .tabla__gestion .icono {
+        margin-bottom: 0;
+        width: 2rem;
+        height: 2rem;
     }
 }
 

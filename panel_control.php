@@ -65,58 +65,77 @@ if (!$reservas) {
                         <div class="tabla__cabecera">
                             <h2>Gestión de reservas</h2>
                         </div>
+
+                        <div class="tabla__responsive">
+                            <table class="tabla__gestion">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <svg class="icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"/></svg> Nombre
+                                        </th>
+                                        <th>
+                                            <svg class="icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg> Teléfono
+                                        </th>
+                                        <th>
+                                            <svg class="icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M128 0c17.7 0 32 14.3 32 32l0 32 128 0 0-32c0-17.7 14.3-32 32-32s32 14.3 32 32l0 32 48 0c26.5 0 48 21.5 48 48l0 48L0 160l0-48C0 85.5 21.5 64 48 64l48 0 0-32c0-17.7 14.3-32 32-32zM0 192l448 0 0 272c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 192zm64 80l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm128 0l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM64 400l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zm112 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16z"/></svg> Fecha
+                                        </th>
+                                        <th>
+                                            <svg class="icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg> Hora
+                                        </th>
+                                        <th>
+                                            <svg class="icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192l42.7 0c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0L21.3 320C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7l42.7 0C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3l-213.3 0zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352l117.3 0C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7l-330.7 0c-14.7 0-26.7-11.9-26.7-26.7z"/></svg> Nº Personas
+                                        </th>
+                                        <th>
+                                            <svg class="icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336l24 0 0-64-24 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l48 0c13.3 0 24 10.7 24 24l0 88 8 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-80 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg> Estado
+                                        </th>
+                                        <th>
+                                            <svg class="icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L362.3 51.7l97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L437.7 172.3 339.7 74.3 172.4 241.7zM96 64C43 64 0 107 0 160L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-96c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7-14.3 32-32 32L96 448c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 64z"/></svg> Modificar
+                                        </th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <?php if ($reservas->num_rows > 0): ?>
+                                        <?php while ($reserva = $reservas->fetch_assoc()): ?>
+                                            <tr>
+                                                <td><?php echo htmlspecialchars($reserva['nombre_cliente']); ?></td>
+                                                <td><?php echo htmlspecialchars($reserva['telefono']); ?></td>
+                                                <td><?php echo date('d/m/Y', strtotime($reserva['fecha'])); ?></td>
+                                                <td><?php echo date('H:i', strtotime($reserva['hora'])); ?></td>
+                                                <td><?php echo htmlspecialchars($reserva['n_personas']); ?></td>
+                                                <td>
+                                                    <span class="estado__fondo <?php echo $reserva['estado'] ?>">
+                                                        <?php echo htmlspecialchars($reserva['estado']); ?>
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <form method="POST" action="modificar_estado.php" class="estado__formulario">
+                                                        <input type="hidden" name="id" value="<?php echo $reserva['id']; ?>">
+                                                        <select name="estado" class="estado__seleccion">
+                                                            <option value="pendiente" <?php if ($reserva['estado'] == 'pendiente') echo 'selected'; ?>>pendiente</option>
+                                                            <option value="en_proceso" <?php if ($reserva['estado'] == 'en_proceso') echo 'selected'; ?>>en proceso</option>
+                                                            <option value="completada" <?php if ($reserva['estado'] == 'completada') echo 'selected'; ?>>completada</option>
+                                                            <option value="cancelada" <?php if ($reserva['estado'] == 'cancelada') echo 'selected'; ?>>cancelada</option>
+                                                        </select>
+                                                        <button type="submit" class="boton_modificar">
+                                                            <svg class="icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-242.7c0-17-6.7-33.3-18.7-45.3L352 50.7C340 38.7 323.7 32 306.7 32L64 32zm0 96c0-17.7 14.3-32 32-32l192 0c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32L96 224c-17.7 0-32-14.3-32-32l0-64zM224 288a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                                                        </button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        <?php endwhile; ?>
+                                    <?php else: ?>
+                                        <tr>
+                                            <td colspan="7" class="sin-registros">No hay reservas creadas para mostrar.</td>
+                                        </tr>
+                                    <?php endif; ?>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-
-
-
-
-
-
-
-
             </div>
         </div>
-
-
-        --------------
-        <h3>Bienvenido <?php echo $_SESSION['personal']; ?></h3>
-        <a href="logout.php">Cerrar sesión</a>
-
-
-        <table border="1">
-            <tr>
-                <td>Nombre</td>
-                <td>Teléfono</td>
-                <td>Fecha</td>
-                <td>Hora</td>
-                <td>Nº Personas</td>
-                <td>Estado</td>
-                <td>Modificar</td>
-            </tr>
-            <?php while ($reserva = $reservas->fetch_assoc()): ?>
-                <tr>
-                    <td><?php echo htmlspecialchars($reserva['nombre_cliente']); ?></td>
-                    <td><?php echo htmlspecialchars($reserva['telefono']); ?></td>
-                    <td><?php echo htmlspecialchars($reserva['fecha']); ?></td>
-                    <td><?php echo htmlspecialchars($reserva['hora']); ?></td>
-                    <td><?php echo htmlspecialchars($reserva['n_personas']); ?></td>
-                    <td><?php echo htmlspecialchars($reserva['estado']); ?></td>
-                    <td>
-                        <form method="POST" action="modificar_estado.php">
-                            <input type="hidden" name="id" value="<?php echo $reserva['id']; ?>">
-                            <select name="estado">
-                                <option value="pendiente" <?php if ($reserva['estado'] == 'pendiente') echo 'selected'; ?>>pendiente</option>
-                                <option value="en_proceso" <?php if ($reserva['estado'] == 'en_proceso') echo 'selected'; ?>>en proceso</option>
-                                <option value="completada" <?php if ($reserva['estado'] == 'completada') echo 'selected'; ?>>completada</option>
-                                <option value="cancelada" <?php if ($reserva['estado'] == 'cancelada') echo 'selected'; ?>>cancelada</option>
-                            </select>
-                            <input type="submit" value="Modificar">
-                        </form>
-                    </td>
-                </tr>
-            <?php endwhile; ?>
-        </table>
     </main>
 
     <footer>
