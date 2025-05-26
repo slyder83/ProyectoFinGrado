@@ -31,31 +31,21 @@ if (!$reservas) {
         <div class="header__opacidad"></div>
         <h1 class="header__titulo">Panel de gestión</h1>
     </header>
-    
-    <nav id="navbar">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="formulario_reserva.php">Reservas</a></li>
-            <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
-            <li><a href="login.php">Login</a></li>
-        </ul>
-    </nav>
-
-    <div id="nav-placeholder"></div>
 
     <main>
         <div class="panel__principal">
             <div class="panel__contenido ancho-max sombra">
                 <div class="cabecera__contenido">
-                    <h1>
+                    <h3>
                         <svg class="icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M160 64c0-35.3 28.7-64 64-64L576 0c35.3 0 64 28.7 64 64l0 288c0 35.3-28.7 64-64 64l-239.2 0c-11.8-25.5-29.9-47.5-52.4-64l99.6 0 0-32c0-17.7 14.3-32 32-32l64 0c17.7 0 32 14.3 32 32l0 32 64 0 0-288L224 64l0 49.1C205.2 102.2 183.3 96 160 96l0-32zm0 64a96 96 0 1 1 0 192 96 96 0 1 1 0-192zM133.3 352l53.3 0C260.3 352 320 411.7 320 485.3c0 14.7-11.9 26.7-26.7 26.7L26.7 512C11.9 512 0 500.1 0 485.3C0 411.7 59.7 352 133.3 352z"/></svg>
                         Panel de Control
-                    </h1>
+                    </h3>
+
                     <div class="usuario-informacion">
                         <h3><span>Bienvenido, <?php echo htmlspecialchars($_SESSION['personal']); ?></span></h3>
                         <a href="logout.php" class="boton-cerrar-sesion">
                             <svg class="icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"/></svg>
-                            Cerrar sesión
+                            <p class="small">Cerrar Sessión</p>
                         </a>
                     </div>
                 </div>
@@ -191,7 +181,6 @@ if (!$reservas) {
         </div>
     </footer>
 
-    <!-- <script src="js/script.js"></script> -->
     <script src="js/footer.js"></script>
 
 </body>
