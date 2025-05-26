@@ -17,17 +17,15 @@
         <ul>
             <li><a href="index.html">Inicio</a></li>
             <li><a href="formulario_reserva.php">Reservas</a></li>
-            <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
-            <li><a href="login.php">Login</a></li>
+            <li><a href="index.html#platos">Platos destacados</a></li>
+            <li><a href="index.html#sobre-nosotros">Sobre nosotros</a></li>
         </ul>
     </nav>
-
-    <div id="nav-placeholder"></div>
 
     <main>
         <div class="pagina-formulario">
             <div class="formulario__contenido ancho-max sombra">
-                <!-- Formulario para hacer las reservas con sus datos indicados -->
+                <!-- Formulario para hacer las reservas con los datos indicados por el cliente -->
                 <form action="procesar_reservas.php" method="POST" class="formulario__grupos">
                     <div class="formulario__grupo">
                         <label for="nombre_cliente">Nombre:</label>
@@ -150,7 +148,6 @@
         </div>
     </footer>
 
-    <!-- <script src="js/script.js"></script> -->
     <script src="js/footer.js"></script>
 </body>
 </html>

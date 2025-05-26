@@ -20,13 +20,9 @@ session_start();
     <nav id="navbar">
         <ul>
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="formulario_reserva.php">Reservas</a></li>
-            <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
             <li><a href="login.php">Login</a></li>
         </ul>
     </nav>
-
-    <div id="nav-placeholder"></div>
 
     <main>
         <div class="pagina-formulario">
@@ -55,8 +51,7 @@ session_start();
                             Contraseña:
                         </label>
                         <input type="password" name="password" id="password" required>
-                    </div>
-            
+                    </div>            
             
                     <button type="submit" class="boton-formulario">
                         <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
@@ -65,8 +60,6 @@ session_start();
                     </button>
             </div>
         </div>
-
-
     </main>
 
     <footer>
@@ -125,7 +118,6 @@ session_start();
         </div>
     </footer>
 
-    <!-- <script src="js/script.js"></script> -->
     <script src="js/footer.js"></script>
 
 </body>

@@ -2,44 +2,44 @@
 
 /* Fuentas de la web */
 @layer fonts {
-    /* caveat-regular - latin */
+    /* montserrat-regular - latin */
     @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Caveat';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    src: url('../assets/fonts/caveat-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('../assets/fonts/montserrat-v29-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
     }
-    /* caveat-500 - latin */
+    /* montserrat-500 - latin */
     @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Caveat';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    src: url('../assets/fonts/caveat-v18-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('../assets/fonts/montserrat-v29-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
     }
-    /* caveat-600 - latin */
+    /* montserrat-600 - latin */
     @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Caveat';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
-    src: url('../assets/fonts/caveat-v18-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('../assets/fonts/montserrat-v29-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
     }
-    /* caveat-700 - latin */
+    /* montserrat-700 - latin */
     @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Caveat';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    src: url('../assets/fonts/caveat-v18-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('../assets/fonts/montserrat-v29-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
     }
 }
 
 /* Colores */
 @layer colors {
     :root {
-        /* codigo de colores */
+        /* Colores base de la web */
         --color-blanco: #fff;
         --color-crema: #fff0de;
         --color-negro: #121212;
@@ -55,7 +55,7 @@
         --color-amarillo-claro: #fef3c7;
         --color-naranja: #92400e;
 
-
+        /* Colores de los textos y fondos */
         --color-texto-negro: var(--color-negro);
         --color-texto-negro-claro: var(--color-negro-200);
         --color-texto-blanco: var(--color-blanco);
@@ -76,18 +76,43 @@
 /* Tipografias */
 @layer typography {
     :root {
-        --font-size-80: calc(96 /16 * 1rem);
+        --font-size-80: calc(80 /16 * 1rem);
         --font-size-64: calc(64 /16 * 1rem);
-        --font-size-48: calc(40 /16 * 1rem);
+        --font-size-48: calc(48 /16 * 1rem);
         --font-size-32: calc(32 /16 * 1rem);
         --font-size-24: calc(24 /16 * 1rem);
+        --font-size-16: calc(16 /16 * 1rem);
 
         --font-size-h1: var(--font-size-80);
         --font-size-h2: var(--font-size-64);
         --font-size-h3: var(--font-size-48);
         --font-size-h4: var(--font-size-32);
-        --font-size-p:var(--font-size-32);
-        --font-size-p-small:var(--font-size-24);
+        --font-size-p:var(--font-size-24);
+        --font-size-p-small:var(--font-size-16);
+    }
+
+    /* Diseño responsive para pantallas inferiores a 700px */
+    @media (width < calc(700 / 16 * 1rem)) {
+        :root {
+            --font-size-80: calc(64 /16 * 1rem);
+            --font-size-64: calc(48 /16 * 1rem);
+            --font-size-48: calc(32 /16 * 1rem);
+            --font-size-32: calc(24 /16 * 1rem);
+            --font-size-24: calc(20 /16 * 1rem);
+            --font-size-16: calc(14 /16 * 1rem);
+        }
+    }
+
+    /* Diseño responsive para pantallas de móviles */
+    @media (width < calc(480 /16 * 1rem)) {
+        :root {
+            --font-size-80: calc(48 /16 * 1rem);
+            --font-size-64: calc(32 /16 * 1rem);
+            --font-size-48: calc(24 /16 * 1rem);
+            --font-size-32: calc(20 /16 * 1rem);
+            --font-size-24: calc(16 /16 * 1rem);
+            --font-size-16: calc(12 /16 * 1rem);
+        }
     }
 
     h1 {
@@ -124,7 +149,7 @@
     }
 
     body {
-        font-family: 'Caveat', Arial, Helvetica, sans-serif;
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         line-height: 1.6;
     }
 
@@ -218,8 +243,8 @@
         transition: background 0.3s ease;
         cursor: pointer;
         font-size: var(--font-size-p);
-        padding: 1rem 2rem;
-        margin: 1rem;
+        padding: 0 1rem;
+        margin: 0;
         gap: 1rem;
     }
 
@@ -228,11 +253,33 @@
     }
 
     .boton-cerrar-sesion .icono {
-        width: 2rem;
-        height: 2rem;
+        width: 1rem;
+        height: 1rem;
         display: inline-block;
         margin-bottom: 0;
         color: var(--color-texto-blanco);
+    }
+
+    .boton_modificar {
+        background-color: var(--color-rojo);
+        border: none;
+        border-radius: 4px;
+        padding: 0.5rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease;
+    }
+
+    .boton_modificar:hover {
+        background-color: var(--color-rojo-activo);
+    }
+
+    .boton_modificar .icono {
+        width: 0.5rem;
+        height: 0.5rem;
+        color: var(--color-blanco);
     }
 }
 
@@ -262,8 +309,8 @@
         left: 0;
         width: 100%;
         height: 100%;
-        opacity: 0;
-        background: rgba(0, 0, 0, 0.9);
+        opacity: 0.3;
+        background: var(--color-negro);
         z-index: 1;
     }
 
@@ -296,32 +343,29 @@
     
     nav ul li a {
         text-decoration: none;
-        color: #333;
+        color: var(--color-negro);
+        font-weight: 600;
+        padding: 0.5rem 1rem;
+        position: relative;
     }
     
-    nav.sticky {
-        transform: translateY(20px);
-        background-color: rgba(255, 255, 255, 0.6);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(10px);
-        border-radius: 12px;
-        width: calc(100% - 40px);
-        margin: 0 auto;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        transition: all 0.3s ease;
+    nav ul li a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--color-rojo);
+        transition: width 0.3s ease;
     }
     
-    #nav-placeholder {
-        height: 0;
-        transition: height 0.3s ease;
+    nav ul li a:hover::after {
+        width: 100%;
     }
-    
-    nav.sticky + #nav-placeholder {
-        height: 20px;
-    }
-    
-    nav.sticky ul li a {
-        color: green;
+
+    nav ul li a:hover {
+        color: var(--color-rojo);
     }
 }
 
@@ -554,15 +598,35 @@
     
     .cabecera__contenido {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        gap: 2rem;
+    }
+
+    .cabecera__contenido h3 {
+        font-size: var(--font-size-48);
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .cabecera__contenido h3 .icono {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-bottom: 0;
     }
     
-    .usuario__informacion {
-        display: inline-flex;
-        flex-direction: row;
+    .usuario-informacion {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .usuario-informacion h3 {
+        font-size: var(--font-size-24);
+        margin: 0;
     }
 
     .tabla__principal {
@@ -586,15 +650,41 @@
         border-collapse: collapse;
     }
 
-    .tabla__gestion th, .tabla__gestion td {
-        padding: 0.75rem 1rem;
+    .tabla__gestion td {
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .tabla__gestion td:first-child {
         text-align: left;
+    }
+
+    .tabla__gestion th, .tabla__gestion td {
+        padding: 0.5rem 1rem;
         border-bottom: 1px solid var(--color-negro-200);
     }
 
     .tabla__gestion th {
         background-color: var(--color-negro-400);
         font-weight: 600;
+        white-space: nowrap;
+    }
+
+    .tabla__gestion .icono {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .tabla__gestion th .icono {
+        width: 1rem;
+        height: 1rem;
+        margin-right: 0.5rem;
+        vertical-align: middle;
+        display: inline-block;
     }
 
     .tabla__gestion tbody tr:hover {
@@ -635,7 +725,7 @@
     }
 
     .estado__seleccion {
-        padding: 0.5rem 1rem;
+        padding: 0.25rem 0.6rem;
         border-radius: 5px;
         border: 1px solid var(--color-negro-200);
     }
@@ -644,18 +734,6 @@
         text-align: center;
         padding: 2rem;
         color: var(--color-texto-negro-claro);
-    }
-
-    .tabla__gestion .icono {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .tabla__gestion .icono {
-        margin-bottom: 0;
-        width: 2rem;
-        height: 2rem;
     }
 }
 
