@@ -2,6 +2,9 @@
 // Para conectarse a la base de datos
 require_once "conexion.php";
 
+// Configuracion del correo y contraseña
+require_once "config.php";
+
 // Para poder usar despues PHPmailer
 require 'vendor/autoload.php';
 use PHPMailer\PHPMailer\PHPMailer;
@@ -29,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Ejecutar la consulta
     if ($stmt->execute()) {
-        // Dos instancias de PHPmailer para evitar  errores con el envio del correo al cliente
+        // Dos instancias de PHPmailer para evitar errores con el envio del correo al cliente
         // El uso del correo para el restaurante
         $emailRestaurante = new PHPMailer(true);
 
@@ -38,14 +41,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $emailRestaurante->isSMTP();
             $emailRestaurante->Host = 'smtp.gmail.com';
             $emailRestaurante->SMTPAuth = true;
-            $emailRestaurante->Username = ''; // Aqui va el correo del restaurante
-            $emailRestaurante->Password = ''; //Aqui va la contraseña
+            $emailRestaurante->Username = $correoRestaurante;
+            $emailRestaurante->Password = $contrasenaCorreo;
             $emailRestaurante->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $emailRestaurante->Port = 587;
             $emailRestaurante->CharSet = 'UTF-8';
 
-            $emailRestaurante->setFrom('', 'Restaurante Asia Oriental');
-            $emailRestaurante->addAddress('');
+            $emailRestaurante->setFrom($correoRestaurante, 'Restaurante Asia Oriental');
+            $emailRestaurante->addAddress($correoRestaurante);
             $emailRestaurante->Subject = 'Nueva Reserva hecha - ' . $nombre_cliente;
             
             $mensaje_restaurante = "Se ha hecho una nueva reserva:\n\n";
@@ -66,13 +69,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $emailCliente->isSMTP();
             $emailCliente->Host = 'smtp.gmail.com';
             $emailCliente->SMTPAuth = true;
-            $emailCliente->Username = ''; // Aquí va el correo del restaurante
-            $emailCliente->Password = ''; // Aquí va la contraseña
+            $emailCliente->Username = $correoRestaurante;
+            $emailCliente->Password = $contrasenaCorreo;
             $emailCliente->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $emailCliente->Port = 587;
             $emailCliente->CharSet = 'UTF-8';
 
-            $emailCliente->setFrom('', 'Restaurante Asia Oriental');
+            $emailCliente->setFrom($correoRestaurante, 'Restaurante Asia Oriental');
             $emailCliente->addAddress($email, $nombre_cliente);
             $emailCliente->Subject = 'Confirmación de la reserva - Restaurante Asia Oriental';
 
