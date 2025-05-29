@@ -3,10 +3,10 @@
 require_once "conexion.php";
 
 // Crear el personal administrador
-$nombre = "administrador";
-$email = "admin@restaurante.com";
-$password = "admin1234";
-$hash_password = password_hash($password, PASSWORD_DEFAULT);
+$nombre = "administrador"; // Nombre del personal del restaurante
+$email = "admin@restaurante.com"; // Correo electrónico del personal del restaurante
+$password = "admin1234"; // Contraseña del personal del restaurante
+$hash_password = password_hash($password, PASSWORD_DEFAULT); // Esto cifra la contraseña que se guarda en al base de datos
 
 // Insertar el personal administrador
 $stmt = $conn->prepare("INSERT INTO personal (nombre, email, password_hash) VALUES (?, ?, ?)");

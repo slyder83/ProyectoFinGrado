@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $emailRestaurante->Host = 'smtp.gmail.com';
             $emailRestaurante->SMTPAuth = true;
             $emailRestaurante->Username = ''; // Aqui va el correo del restaurante
-            $emailRestaurante->Password = 'qmefsgofzveuoltn'; //Aqui va la contraseña
+            $emailRestaurante->Password = ''; //Aqui va la contraseña
             $emailRestaurante->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $emailRestaurante->Port = 587;
             $emailRestaurante->CharSet = 'UTF-8';

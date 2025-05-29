@@ -1,4 +1,4 @@
-@layer fonts, colors, typography, global, button, header, menu-nav, hero, platos, sobre-nosotros, footer;
+@layer fonts, colors, typography, global, botones, header, menu-nav, hero, platos, sobre-nosotros, formulario, panel-gestion, footer;
 
 /* Fuentas de la web */
 @layer fonts {
